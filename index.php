@@ -1,4 +1,8 @@
-
+<?php
+	include('admin/inc/conexion/conexion.php');
+	$sqlcon = mysqli_query($db, "SELECT * FROM sociedad_civil_siguatepeque") or die(mysqli_error());
+  $rowDatos=mysqli_fetch_array($sqlcon);
+?>
 <!--
 author: W3layouts
 author URL: http://w3layouts.com
@@ -8,12 +12,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Executive a Corporate Business Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title><?php echo $rowDatos['Nombre']; ?></title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Executive Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<meta name="keywords" content="Sociedad Civil, Siguatepeque, Auditorias, Denuncias, Comentarios, Transparencia" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
@@ -24,7 +27,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
 <!-- //font-awesome icons -->
 <link href="//fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -33,7 +36,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
+		$(".scroll").click(function(event){
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
@@ -41,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <!-- start-smoth-scrolling -->
 </head>
-	
+
 <body>
 <!-- banner -->
 	<div class="banner">
@@ -59,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="#" class="wthree_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						<li><a href="#" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 						<li><a href="#" class="wthree_dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-						
+
 					</ul>
 				</div>
 				<div class="clearfix"></div>
@@ -149,7 +152,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							});
 					</script>
 				<!-- //flexSlider -->
-			</div>			
+			</div>
 		</div>
 	</div>
 <!-- //banner -->
@@ -159,7 +162,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	 <div class="container">
 		 <div class="welcome-top">
 			<h2 class="w3ls_head">Welcome</h2>
-			
+
 			 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
 				corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
 		 </div>
@@ -177,7 +180,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				   <div class="chrty">
 						<figure class="icon">
 							<span class="glyphicon-icon glyphicon-asterisk" aria-hidden="true"></span>
-						</figure>						
+						</figure>
 						<h3>Rutrum Erat </h3>
 						<p>Curabitur convallis rutrum erat nec vestibulum. Sed iaculis hendrerit lectus sit amet lobortis vulputate magna finibus molestie tellus.</p>
 				  </div>
@@ -186,16 +189,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				   <div class="chrty">
 						 <figure class="icon">
 							<span class="glyphicon-icon glyphicon-flag" aria-hidden="true"></span>
-						</figure>						
+						</figure>
 						<h3>Sed Iaculis</h3>
 						<p>Curabitur convallis rutrum erat nec vestibulum. Sed iaculis hendrerit lectus sit amet lobortis vulputate magna finibus molestie tellus.</p>
 				  </div>
 			  </div>
 			  <div class="clearfix"></div>
-		 </div>	
+		 </div>
 		<div class="banner-grids">
 			<div class="col-md-8 banner-grid1">
-				
+
 				<h5>Lorem ipsum dolor sit amet, lorem Consec tetuer adipicing it. Praesebul lorem ipsum.S natoque penatibus et gnis dent monteiculu..</h5>
 				<p>Lorem ipsum dolor sit amet, lorem Consec tetuer adipicing it. Praesebul lorem ipsum.S natoque penatibus et gnis dent monteiculu. Praesent vesti Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus .</p>
 			</div>
@@ -203,7 +206,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<img src="images/1.jpg" alt=" " class="img-responsive">
 			</div>
 				<div class="clearfix"></div>
-		</div>				 
+		</div>
 	 </div>
 </div>
 <!-- //welcome -->
@@ -242,7 +245,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 															<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
 															<a href="#">Michael </a>, Customer
 														</div>
-															<div class="clearfix"></div>     
+															<div class="clearfix"></div>
 												</div>
 											   </div>
 											<div class="col-md-6 customer-grid">
@@ -255,7 +258,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<div class="clearfix"></div>
 												</div>
 											</div>
-										</div>	
+										</div>
 					                </div>
 					                 <div class="item-owl">
 					                	<div class="customer-say">
@@ -266,7 +269,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 															<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
 															<a href="#">Michael </a>, Customer
 														</div>
-															<div class="clearfix"></div>     
+															<div class="clearfix"></div>
 												</div>
 											   </div>
 											<div class="col-md-6 customer-grid">
@@ -279,7 +282,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<div class="clearfix"></div>
 												</div>
 											</div>
-										</div>	
+										</div>
 					                </div>
 					                 <div class="item-owl">
 					                	<div class="customer-say">
@@ -290,7 +293,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 															<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
 															<a href="#">Michael </a>, Customer
 														</div>
-															<div class="clearfix"></div>     
+															<div class="clearfix"></div>
 												</div>
 											   </div>
 											<div class="col-md-6 customer-grid">
@@ -303,13 +306,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<div class="clearfix"></div>
 												</div>
 											</div>
-										</div>	
+										</div>
 					                </div>
 				              </div>
 						</div>
 						<!--//screen-gallery-->
 		</div>
-	</div>	
+	</div>
 	<!--//client-->
 <!-- what -->
 	<div class="what-w3ls">
@@ -451,12 +454,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				containerID: 'toTop', // fading element id
 				containerHoverID: 'toTopHover', // fading element hover id
 				scrollSpeed: 1200,
-				easingType: 'linear' 
+				easingType: 'linear'
 				};
 			*/
-								
+
 			$().UItoTop({ easingType: 'easeOutQuart' });
-								
+
 			});
 	</script>
 <!-- //here ends scrolling icon -->
