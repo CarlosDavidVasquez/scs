@@ -255,15 +255,15 @@ ALTER TABLE `anuncios`
 -- Indices de la tabla `anuncios_fotos`
 --
 ALTER TABLE `anuncios_fotos`
-  ADD PRIMARY KEY (`Id_Foto`),
-  ADD KEY `Id_Anuncio` (`Id_Anuncio`);
+  ADD KEY `Id_Anuncio` (`Id_Anuncio`),
+  ADD KEY `Id_Foto` (`Id_Foto`) USING BTREE;
 
 --
 -- Indices de la tabla `anuncios_videos`
 --
 ALTER TABLE `anuncios_videos`
-  ADD PRIMARY KEY (`Id_Video`),
-  ADD KEY `Id_Anuncio` (`Id_Anuncio`);
+  ADD KEY `Id_Anuncio` (`Id_Anuncio`),
+  ADD KEY `Id_Video` (`Id_Video`) USING BTREE;
 
 --
 -- Indices de la tabla `archivos_municipalismo`
